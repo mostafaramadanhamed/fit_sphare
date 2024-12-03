@@ -1,4 +1,5 @@
 import 'package:fit_sphere/core/routing/routes.dart';
+import 'package:fit_sphere/features/onboarding/ui/on_boarding_screen.dart';
 import 'package:flutter/material.dart';
 
 class AppRouter {
@@ -6,9 +7,7 @@ class AppRouter {
     
     switch (settings.name) {
       case Routes.onBoarding: 
-        return MaterialPageRoute(builder: (_) => const Center(
-          child: Text("OnBoarding"),
-        ));
+        return MaterialPageRoute(builder: (_) => const OnBoardingScreen());
       case Routes.login:
         return MaterialPageRoute(builder: (_) => const Center(
           child: Text("Login"),
