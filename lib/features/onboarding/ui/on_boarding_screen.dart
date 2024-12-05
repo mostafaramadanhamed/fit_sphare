@@ -1,3 +1,5 @@
+import 'package:fit_sphere/core/helper/spacing_extension.dart';
+import 'package:fit_sphere/core/theme/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -105,20 +107,30 @@ class _OnBoardingScreenState extends State<OnBoardingScreen>
               }),
             ),
           ),
-          SizedBox(
-            height: 12.h,
-          ),
+        12.ph,
            Text(
             'Waffles are just \n pancakes with abs',
             style: TextStyle(fontSize: 30.sp, fontWeight: FontWeight.bold),
             textAlign: TextAlign.center,
-          ), SizedBox(
-            height: 12.h,
           ),
+          12.ph,
            Text(
               'Our recipes and workouts are the perfect way to start your day. Sweat hard, then have a snack or drink. Whatever you prefer!',
               style: TextStyle(fontSize: 16.sp, color: Colors.grey),
               textAlign: TextAlign.center),
+              16.ph,
+              SizedBox(
+                width: 110.w,
+                height: 6.h,
+                child: LinearProgressIndicator(
+                  backgroundColor: ColorsManager.lightBlack,
+                  color:ColorsManager.lightGreenYellow,
+                  value: 0.58,
+                  borderRadius: BorderRadius.circular(10.r),
+                ),
+              ),
+              36.ph,
+              
         ],
       ),
     );
