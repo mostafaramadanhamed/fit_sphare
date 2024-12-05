@@ -1,3 +1,4 @@
+import 'package:fit_sphere/core/helper/font_weight_helper.dart';
 import 'package:fit_sphere/core/helper/spacing_extension.dart';
 import 'package:fit_sphere/core/theme/colors.dart';
 import 'package:fit_sphere/core/widgets/app_text_button.dart';
@@ -20,7 +21,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen>
   void initState() {
     super.initState();
     _controller = AnimationController(
-      duration: const Duration(seconds: 3),
+      duration: const Duration(seconds: 7),
       vsync: this,
     );
 
@@ -37,7 +38,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen>
       Tween<Offset>(begin: const Offset(-1, 0), end: const Offset(-0.40, -0.3))
           .animate(
               CurvedAnimation(parent: _controller, curve: Curves.bounceOut)),
-      Tween<Offset>(begin: const Offset(-1,-1), end: const Offset(0.8, 1.7))
+      Tween<Offset>(begin: const Offset(2,-1), end: const Offset(0.9, 1.7))
           .animate(CurvedAnimation(
               parent: _controller, curve: Curves.easeInToLinear)),
     ];
@@ -95,14 +96,14 @@ class _OnBoardingScreenState extends State<OnBoardingScreen>
                                       'FIT SPHARE',
                                       style: TextStyle(
                                           fontSize: 25.sp,
-                                          fontWeight: FontWeight.bold,
-                                          shadows: [
+                                          fontWeight: FontWeightHelper.extraBold,
+                                          shadows: const [
                                             Shadow(
-                                                color: Color(0xFF252727),
+                                                color: ColorsManager.lightBlack,
                                                 offset: Offset(0, 0),
                                                 blurRadius: 10)
                                           ],
-                                          color: Color(0xFFCEFF67)),
+                                          color:  ColorsManager.lightGreenYellow),
                                     )))),
                 );
               }),
