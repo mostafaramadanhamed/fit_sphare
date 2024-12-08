@@ -37,7 +37,7 @@ class HomeScreen extends StatelessWidget {
                 child: Container(
                   padding: const EdgeInsets.all(12),
                   alignment: AlignmentDirectional.centerStart,
-                  height: 120.h,
+                  height: 116.h,
                   decoration: BoxDecoration(
                     color: ColorsManager.lightPurple,
                     borderRadius: BorderRadius.circular(10.r),
@@ -56,7 +56,7 @@ class HomeScreen extends StatelessWidget {
                               'assets/images/workout.png',
                             ))),
                       ),
-                     8.ph,
+                     6.ph,
                       Text(
                         'Workout',
                         style: TextStyles.font18LightBlackBold,
@@ -74,10 +74,39 @@ class HomeScreen extends StatelessWidget {
               Expanded(
                 flex: 2,
                 child: Container(
-                  height: 120.h,
+                  alignment: AlignmentDirectional.centerStart,
+                  height: 116.h,
+                    padding: const EdgeInsets.all(12),
                   decoration: BoxDecoration(
-                    color: ColorsManager.lightBlack,
+                    color: Colors.white,
+                    border: Border.all(color: ColorsManager.lightBlack),
                     borderRadius: BorderRadius.circular(10.r),
+                  ),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Container(
+                        height: 40.h,
+                        width: 40.w,
+                        decoration: const BoxDecoration(
+                          color: ColorsManager.lightPurple,
+                            shape: BoxShape.circle,
+                            image: DecorationImage(
+                                image: AssetImage(
+                              'assets/images/meditate.png',
+                            ))),
+                      )  ,
+                      4.ph,
+                      Text(
+                        'Meditate',
+                        style: TextStyles.font18LightBlackBold,
+                      ),
+                    
+                      Text(
+                        '1 hours',
+                        style: TextStyles.font14LightBlackReguler,
+                      ),
+                    ],
                   ),
                 ),
               ),
