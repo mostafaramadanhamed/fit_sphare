@@ -19,4 +19,14 @@ class TextStyles {
       fontSize: 20.sp,
       color: ColorsManager.lightBlack,
       fontWeight: FontWeightHelper.bold);
+  
+  static TextStyle font18LightBlackBold = TextStyle(
+      fontSize: 18.sp,
+      color: ColorsManager.lightBlack,
+      fontWeight: FontWeightHelper.bold);
+
+  static TextStyle font14LightBlackReguler = TextStyle(
+      fontSize: 14.sp,
+      color: ColorsManager.lightBlack,
+      fontWeight: FontWeightHelper.regular);
 }

@@ -33,17 +33,46 @@ class HomeScreen extends StatelessWidget {
           Row(
             children: [
               Expanded(
-                flex: 2,
+                flex: 3,
                 child: Container(
+                  padding: const EdgeInsets.all(12),
+                  alignment: AlignmentDirectional.centerStart,
                   height: 120.h,
                   decoration: BoxDecoration(
-                    color: ColorsManager.lightBlack,
+                    color: ColorsManager.lightPurple,
                     borderRadius: BorderRadius.circular(10.r),
+                  ),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Container(
+                        height: 40.h,
+                        width: 40.w,
+                        decoration: const BoxDecoration(
+                          color: Colors.white,
+                            shape: BoxShape.circle,
+                            image: DecorationImage(
+                                image: AssetImage(
+                              'assets/images/workout.png',
+                            ))),
+                      ),
+                     8.ph,
+                      Text(
+                        'Workout',
+                        style: TextStyles.font18LightBlackBold,
+                      ),
+                      
+                      Text(
+                        '2 hours',
+                        style: TextStyles.font14LightBlackReguler,
+                      ),
+                    ],
                   ),
                 ),
               ),
               16.pw,
               Expanded(
+                flex: 2,
                 child: Container(
                   height: 120.h,
                   decoration: BoxDecoration(
@@ -54,30 +83,28 @@ class HomeScreen extends StatelessWidget {
               ),
             ],
           ),
-       16.ph,
-       Row(
-            children: [
-              Expanded(
-               
-                child: Container(
-                  height: 75.h,
-                  decoration: BoxDecoration(
-                    color: ColorsManager.lightBlack,
-                    borderRadius: BorderRadius.circular(10.r),
-                  ),
+          16.ph,
+          Row(children: [
+            Expanded(
+              child: Container(
+                height: 75.h,
+                decoration: BoxDecoration(
+                  color: ColorsManager.lightBlack,
+                  borderRadius: BorderRadius.circular(10.r),
                 ),
               ),
-              16.pw,
-              Expanded(
-                child: Container(
-                  height: 75.h,
-                  decoration: BoxDecoration(
-                    color: ColorsManager.lightBlack,
-                    borderRadius: BorderRadius.circular(10.r),
-                  ),
+            ),
+            16.pw,
+            Expanded(
+              child: Container(
+                height: 75.h,
+                decoration: BoxDecoration(
+                  color: ColorsManager.lightBlack,
+                  borderRadius: BorderRadius.circular(10.r),
                 ),
               ),
-       ])
+            ),
+          ])
         ]),
       ),
     );
