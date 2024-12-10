@@ -171,11 +171,12 @@ class HomeScreen extends StatelessWidget {
                           color: Colors.white,
                         )),
                     SizedBox(
-                      child: Divider(
+                      width: 61.w,
+                      height: 4.h,
+                      child: const Divider(
                         color: ColorsManager.lightGreenYellow,
-                        thickness: 2,
+                        thickness: 4,
                       ),
-                      width: 100.w,
                     )
                   ],
                 ),
