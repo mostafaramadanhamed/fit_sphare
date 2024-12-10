@@ -49,19 +49,18 @@ class HomeScreen extends StatelessWidget {
                         height: 40.h,
                         width: 40.w,
                         decoration: const BoxDecoration(
-                          color: Colors.white,
+                            color: Colors.white,
                             shape: BoxShape.circle,
                             image: DecorationImage(
                                 image: AssetImage(
                               'assets/images/workout.png',
                             ))),
                       ),
-                     6.ph,
+                      6.ph,
                       Text(
                         'Workout',
                         style: TextStyles.font18LightBlackBold,
                       ),
-                      
                       Text(
                         '2 hours',
                         style: TextStyles.font14LightBlackReguler,
@@ -76,7 +75,7 @@ class HomeScreen extends StatelessWidget {
                 child: Container(
                   alignment: AlignmentDirectional.centerStart,
                   height: 116.h,
-                    padding: const EdgeInsets.all(12),
+                  padding: const EdgeInsets.all(12),
                   decoration: BoxDecoration(
                     color: Colors.white,
                     border: Border.all(color: ColorsManager.lightBlack),
@@ -89,19 +88,18 @@ class HomeScreen extends StatelessWidget {
                         height: 40.h,
                         width: 40.w,
                         decoration: const BoxDecoration(
-                          color: ColorsManager.lightPurple,
+                            color: ColorsManager.lightPurple,
                             shape: BoxShape.circle,
                             image: DecorationImage(
                                 image: AssetImage(
                               'assets/images/meditate.png',
                             ))),
-                      )  ,
+                      ),
                       4.ph,
                       Text(
                         'Meditate',
                         style: TextStyles.font18LightBlackBold,
                       ),
-                    
                       Text(
                         '1 hours',
                         style: TextStyles.font14LightBlackReguler,
@@ -117,9 +115,43 @@ class HomeScreen extends StatelessWidget {
             Expanded(
               child: Container(
                 height: 75.h,
+                alignment: AlignmentDirectional.centerStart,
+                padding: const EdgeInsets.all(12),
                 decoration: BoxDecoration(
-                  color: ColorsManager.lightBlack,
+                  color: Colors.white,
                   borderRadius: BorderRadius.circular(10.r),
+                  border: Border.all(color: ColorsManager.lightBlack),
+                ),
+                child: Row(
+                  children: [
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          "Food",
+                          style: TextStyles.font18LightBlackBold,
+                        ),
+                        Text(
+                          "1832 kcal",
+                          style: TextStyles.font14LightBlackReguler,
+                        ),
+                      ],
+                    ),
+                    const Spacer(),
+                    Container(
+                      height: 40.h,
+                      width: 40.w,
+                      decoration: const BoxDecoration(
+                        shape: BoxShape.circle,
+                        color: ColorsManager.lightPurple,
+                        image: DecorationImage(
+                          image: AssetImage(
+                            'assets/images/food.png',
+                          ),
+                        ),
+                      ),
+                    ),
+                  ],
                 ),
               ),
             ),
@@ -130,6 +162,22 @@ class HomeScreen extends StatelessWidget {
                 decoration: BoxDecoration(
                   color: ColorsManager.lightBlack,
                   borderRadius: BorderRadius.circular(10.r),
+                ),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text("Let's Go",
+                        style: TextStyles.font18LightBlackBold.copyWith(
+                          color: Colors.white,
+                        )),
+                    SizedBox(
+                      child: Divider(
+                        color: ColorsManager.lightGreenYellow,
+                        thickness: 2,
+                      ),
+                      width: 100.w,
+                    )
+                  ],
                 ),
               ),
             ),
