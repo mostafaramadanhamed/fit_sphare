@@ -3,7 +3,6 @@ import 'package:fit_sphere/core/theme/text_styles.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import '../../../core/theme/colors.dart';
 import 'widgets/lets_go_button.dart';
 import 'widgets/plan_card.dart';
 import 'widgets/small_plan_card.dart';
