@@ -1,5 +1,7 @@
 import 'package:fit_sphere/core/helper/font_weight_helper.dart';
+import 'package:fit_sphere/core/helper/navigation_extension.dart';
 import 'package:fit_sphere/core/helper/spacing_extension.dart';
+import 'package:fit_sphere/core/routing/routes.dart';
 import 'package:fit_sphere/core/theme/colors.dart';
 import 'package:fit_sphere/core/widgets/app_text_button.dart';
 import 'package:flutter/material.dart';
@@ -132,7 +134,9 @@ class _OnBoardingScreenState extends State<OnBoardingScreen>
                 ),
               ),
               36.ph,
-              AppTextButton(buttonText: 'Get Started', onPressed: (){},buttonWidth: 195,buttonHeight: 59,),
+              AppTextButton(buttonText: 'Get Started', onPressed: (){
+                context.pushNamed(Routes.home);
+              },buttonWidth: 195,buttonHeight: 59,),
               
         ],
       ),
